@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.5.RELEASE</version>
+      <relativePath/>
+
+  </parent>
+  
+    <artifactId>lucene</artifactId>
+    <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>geocoding</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<apache.lucene>6.5.1</apache.lucene>
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+    </properties>
+    <dependencies>
+     <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-autoconfigure</artifactId>
+              
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-cache</artifactId>
+                
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+               
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                
+                <scope>test</scope>
+            </dependency>
+
+           
+
+            <!--暴露各种指标-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+               
+            </dependency>
+
+        
+
+       <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency> 
+
+
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-highlighter</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-smartcn</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-spatial</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-spatial3d</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-spatial-extras</artifactId>
+            <version>${apache.lucene}</version>
+        </dependency>
+       
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-shapefile</artifactId>
+             <version>17.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-api</artifactId>
+           <version>17.1</version>  
+        </dependency>
+       
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-graph</artifactId>
+             <version>17.1</version>
+        </dependency>
+      	<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.28</version>
+		</dependency>
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+        </dependency>
+
+        <dependency>
+                <groupId>org.geotools.jdbc</groupId>
+                <artifactId>gt-jdbc-postgis</artifactId>
+                <version>17.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.geotools</groupId>
+                <artifactId>gt-cql</artifactId>
+                <version>17.1</version>
+            </dependency>
+
+         
+
+            <dependency>
+                <groupId>org.geotools</groupId>
+                <artifactId>gt-render</artifactId>
+                 <version>17.1</version>
+            </dependency>
+
+            
+             <dependency>
+                <groupId>org.geotools</groupId>
+                <artifactId>gt-referencing</artifactId>
+                <version>17.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.locationtech.spatial4j</groupId>
+                <artifactId>spatial4j</artifactId>
+                <version>0.6</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.6</version>
+            </dependency>
+    </dependencies>
+     <repositories>
+        <repository>
+            <id>osgeo</id>
+            <name>OSGeo Release Repository</name>
+            <url>https://repo.osgeo.org/repository/release/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+        <repository>
+            <id>osgeo-snapshot</id>
+            <name>OSGeo Snapshot Repository</name>
+            <url>https://repo.osgeo.org/repository/snapshot/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+    <build>
+        <finalName>lucene</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

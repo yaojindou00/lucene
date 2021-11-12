@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GBK" ?>
+<root>
+  
+     <layer code="sx_feiqi" value="废气"/>
+	 <layer code="sx_feishui" value="废水"/>
+	 <layer code="sx_wsclc" value="污水处理厂"/>
+	 <layer code="sx_fsfqwsclc" value="废水废气污水处理厂"/>
+</root>        
